@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import Pneu from './components/Pneu';
 import Evento from './components/Evento';
 import Avisador from './components/Avisador';
 import Teste from './components/Teste';
 import LayoutForm from './components/LayoutForm';
 import Temperaturas from './components/Temperaturas';
+import PapaiNoel from './components/PapaiNoel';
 
 function App() {
   const[inputNome, setInputNome] = useState('')
@@ -22,6 +24,10 @@ function App() {
 
       {/* <p>Nome digitado: {inputNome}</p> */}
 
+      <hr/>
+      <PapaiNoel/>
+      <hr/>
+      <Pneu/>
       <hr/>
         <Temperaturas />
         <hr/>
