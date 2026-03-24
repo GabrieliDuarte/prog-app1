@@ -3,8 +3,8 @@ function Paridade() {
     // sq2-4
     function calcularParidade(){
         let numero = Number(prompt("Digite o número:"))
-        if(numero % 2 == 0){
-            alert("É par!!!! ihuuuuu 🥳 ")
+        if(numero % 2 == 0){  //"Resto da Divisão".
+            alert("É par!!!! ihuuuuu 🥳 ")   //Colocando emojis No Windows: Aperte a tecla Windows + .
         }else{
             alert("Ímpar... 🏴‍☠️💀☠️")
         }
@@ -17,4 +17,4 @@ function Paridade() {
     )
 }
 
-export default Paridade
+export default Paridade   

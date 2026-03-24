@@ -3,6 +3,8 @@ function Voto() {
     function processarIdade(){
         let idade = Number(prompt("Idade:"))
         if(idade < 16){
+//|| (OU)  && (E)
+
             alert("Não pode votar")
         }else if(idade == 16 || idade == 17 || idade > 65){
             alert("Voto facultativo")
@@ -18,4 +20,4 @@ function Voto() {
     )
 }
 
-export default Voto
+export default Voto 

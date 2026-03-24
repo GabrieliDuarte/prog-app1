@@ -25,8 +25,8 @@ function DiaDaSemana() {
 
         switch(dia){
             case 1: alert("Domingo")
-                    alert("Eu gosto dos domingos")
-                    break
+                    alert("Eu gosto dos domingos") //case 1:: Significa "No caso do valor ser exatamente 1, faça o seguinte...".
+                    break //break manda o JavaScript parar a execução e sair do bloco.
             case 2: alert("Segunda")
                     break
             case 3: alert("Terça")
@@ -39,7 +39,7 @@ function DiaDaSemana() {
                     break
             case 7: alert("Sábado")
                     break
-            default: alert("Esse dia não existe ou é carnaval")
+            default: alert("Esse dia não existe ou é carnaval") //default:: É o equivalente ao else
         }
     }
 

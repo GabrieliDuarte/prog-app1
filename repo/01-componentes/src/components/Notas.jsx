@@ -3,10 +3,12 @@ function Notas() {
 
     function classificarNota(){
         let nota = Number(prompt("Digite a nota (0 a 100):"))
+
         // if(nota > 100 || nota < 0){
         //     alert("Deu ruim")
         // }else 
-        if(nota > 80 && nota <= 100){
+
+        if(nota > 80 && nota <= 100){  //&& (E / AND)      || (OU / OR):
             alert("A")
         }else if(nota > 60){
             alert("B")

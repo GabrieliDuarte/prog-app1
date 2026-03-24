@@ -11,7 +11,13 @@ function Pousada() {
 
     function calcular(){
         let diarias = Number(prompt("Quantos dias?"))
+
+        //Até 5 dias: R$ 100 por dia.
+        //De 6 a 10 dias: R$ 90 por dia.
+        //  11 dias ou mais: R$ 80 por dia.
+
         let valorDiaria
+
         if(diarias <= 5){
             valorDiaria = 100
         }else if(diarias < 11){
@@ -19,10 +25,12 @@ function Pousada() {
         }else{
             valorDiaria = 80
         }
+
         let valorBruto = diarias * valorDiaria
         let desconto10 = valorBruto * 10/100
         let desconto15 = valorBruto * 15/100 
         let valorTotal = valorBruto - desconto10 - desconto15 + 150 
+        
         setConta("Valor a pagar: R$" + valorTotal.toFixed(2))
     }
 
