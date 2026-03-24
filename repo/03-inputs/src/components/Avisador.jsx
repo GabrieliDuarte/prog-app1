@@ -1,21 +1,22 @@
 import {useState} from 'react'
 
 function Avisador() {
-    const[mostrar, setMostrar] = useState(false)
+    const[mostrar, setMostrar] = useState(false)  //começa como false 
+
     function alternar(){
-        setMostrar(!mostrar)
+        setMostrar(!mostrar) //! (NÃO / NOT).
     }
     function inverter(){
         if(mostrar == true){
             setMostrar(false)
-        }else{
+        }else{  
             setMostrar(true)
         }
     }
     return (
         <div>
             
-            <button onClick={() => setMostrar(!mostrar)}>Mostrar</button>
+            <button onClick={() => setMostrar(!mostrar)}>Mostrar</button>    
             <button onClick={alternar}>Mostrar2</button>
             <button onClick={inverter}>Mostrar3</button>
             {mostrar && <p>Aviso importante, sua vida está em risco...</p>}
@@ -23,5 +24,6 @@ function Avisador() {
         </div>
     )
 }
+//Arrow Function () =>).
 
 export default Avisador
