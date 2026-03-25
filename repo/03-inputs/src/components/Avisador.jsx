@@ -1,3 +1,8 @@
+//### **0. O Grande Avisador (obrigatório)🔈**
+//Crie um componente que apresenta inicialmente apenas um botão. Quando clicado esse botão faz aparecer a mensagem 
+// "Celulares e jogos são proibidos no laboratório. Cada vez que alguém fizer isso a equipe perde um ponto na sprint 
+// corrente da SA." Essa mensagem deve ser exibida usando renderização condicional.
+
 import {useState} from 'react'
 
 function Avisador() {

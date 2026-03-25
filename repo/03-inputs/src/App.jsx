@@ -7,6 +7,10 @@ import Teste from './components/Teste';
 import LayoutForm from './components/LayoutForm';
 import Temperaturas from './components/Temperaturas';
 import PapaiNoel from './components/PapaiNoel';
+import Pum from './components/Pum';
+import Bondinho from './components/Bondinho';
+import Notas from './components/Notas'
+import Combustível from './components/Combustível'
 
 function App() {
   const[inputNome, setInputNome] = useState('')
@@ -15,15 +19,23 @@ function App() {
   }
   return (
     <>
-      <h1>Inputs controlados</h1>
+      <h1>Inputs</h1>
       Nome <input type="text"
         value={inputNome}
         onChange={(e) => setInputNome(e.target.value) }
       />
       <button onClick={cadastrar}>Cadastrar</button>
 
-      {/* <p>Nome digitado: {inputNome}</p> */}
+      <p>Nome digitado: {inputNome}</p> 
 
+      <hr/>
+      <Combustível/>
+      <hr/>
+      <Notas/>
+      <hr/>
+      <Bondinho/>
+      <hr/>
+      <Pum/>
       <hr/>
       <PapaiNoel/>
       <hr/>

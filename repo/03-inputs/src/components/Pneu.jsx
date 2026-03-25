@@ -31,9 +31,9 @@ function Pneu() {
         <label>
           Pressão desejada (N):
           <input 
-            type="number" 
+            type="number"  //cria aquelas setinhas de aumentar/diminuir no navegador
             value={pressaoDesejada} 
-            onChange={(e) => setPressaoDesejada(e.target.value)} 
+            onChange={(e) => setPressaoDesejada(e.target.value)}   //e.target.value capturado pelo React sempre chega como texto (string).
             placeholder="Ex: 30"
           />
         </label>
@@ -62,4 +62,4 @@ function Pneu() {
   );
 }
 
-export default Pneu;
+export default Pneu;  

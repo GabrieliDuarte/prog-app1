@@ -16,3 +16,50 @@
 //Restrições
 //1≤A≤50
 //1≤M≤50
+import { useState } from 'react';
+
+function Bondinho() {
+    const [alunos, setAlunos] = useState('');
+    const [monitores, setMonitores] = useState('');
+    const [resultado, setResultado] = useState('');
+
+    function verificarViagem() {
+        const totalPessoas = Number(alunos) + Number(monitores);
+
+        if (totalPessoas <= 50) {
+            setResultado('Sim, é possível levar todos os alunos e monitores em apenas uma viagem');
+        } else {
+            setResultado('Não é possível levar todos os alunos e monitores em apenas uma viagem');
+        }
+    }
+
+    return (
+        <div>
+            <h2>Bondinho da Excursão</h2>
+            
+            <label>Quantidade de Alunos (A): </label>
+            <input 
+                type="number" 
+                value={alunos} 
+                onChange={(e) => setAlunos(e.target.value)} 
+            />
+            <br />
+
+            <label>Quantidade de Monitores (M): </label>
+            <input 
+                type="number" 
+                value={monitores} 
+                onChange={(e) => setMonitores(e.target.value)} 
+            />
+            <br />
+
+            <button onClick={verificarViagem}>Verificar Lotação</button>
+
+            {resultado && (
+                <p>Resposta: <strong>{resultado}</strong></p>
+            )}
+        </div>
+    );
+}
+
+export default Bondinho;

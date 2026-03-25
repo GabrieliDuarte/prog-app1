@@ -15,39 +15,35 @@
 //21 22 23 PUM
 //25 26 27 PUM
 //
-import React, { useState } from 'react' //rfce
+import {useState} from 'react'
 
 function Pum() {
-    const [resultado,setResultado] = useState([])
-    const [inputN,setInputN] = useState('')
-    function gerarpum(){
-        let texto= ''
+    const[resultado, setResultado]=useState()
+    const[inputN, setInputN]=useState('')
+    function gerarPum(){
+        let texto = ''
         let pums = 0
-        let i = 1
-        let elementos = []
+        let i=1
         while(pums<inputN){
             if(i%4 != 0){
-                texto += i + ''
+                texto += i + ' '
+            }else{
+                texto += 'PUM \n'
+                pums++
             }
-            else{
-                texto += 'PUM'
-                pums ++
-                console.log(pums);
-            }
-            i ++
-        }
+            i++
+        }  
         setResultado(texto)
     }
-
-  return (
-    <div>Pum
-
-
-        <input type='text'
-        
-        />
-    </div>
-  )
+    return (
+        <pre>
+            <input type="number"
+                value={inputN}
+                onChange={(e)=>setInputN(e.target.value)}
+            />
+            <button onClick={gerarPum}>Pum</button>
+            {resultado}
+        </pre>
+    )
 }
-
 export default Pum
