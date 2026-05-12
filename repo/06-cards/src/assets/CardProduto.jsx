@@ -1,12 +1,13 @@
 import './CardProduto.css'
-function CardProduto(prop) {
-    return (
-        <div className="cont-card">
-            <p className='imagem-produto'>{prop.p.imagem}</p>
-            <h2>{prop.p.nome}</h2>
-            <p>R${prop.p.preco.toFixed(2).replace('.', ',')}</p>
-        </div>
-    )
+
+function CardProduto({ p }) {
+  return (
+    <div className="cont-card">
+      <div className="imagem-produto">{p.imagem}</div>
+      <h2>{p.nome}</h2>
+      <p className="preco">R$ {p.preco.toFixed(2).replace('.', ',')}</p>
+    </div>
+  )
 }
 
 export default CardProduto

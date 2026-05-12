@@ -1,13 +1,24 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
 function Render() {
-    const[idade, setIdade] = useState(22)
+    const [idade, setIdade] = useState(22)
 
-    // idade = 18
-    // setIdade(18)
     return (
-        <div>
-            {idade>=18 ? <p>Maior</p> : <p>Menor</p>}
+        <div className="card-exercicio">
+            <h2>🔞 Validador de Idade</h2>
+            
+            <div className="input-group">
+                <label>Sua idade:</label>
+                <input 
+                    type="number" 
+                    value={idade} 
+                    onChange={(e) => setIdade(Number(e.target.value))} 
+                />
+            </div>
+
+            <div className="resultado-destaque">
+                {idade >= 18 ? <p>🍻 Maior de idade</p> : <p>🧃 Menor de idade</p>}
+            </div>
         </div>
     )
 }

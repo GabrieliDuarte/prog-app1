@@ -2,19 +2,23 @@ import './Paginas.css'
 
 function ChurrascariaGaucho() {
     return (
-        <div className={'cont-produtos'} style={{ padding: '20px' }}>
+        <div className="cont-produtos pagina-padrao">
             <h1>🥩 Churrascaria do Gaúcho</h1>
-           
-            <h2 style={{ marginTop: '15px' }}>📋 Cardápio</h2>
-            <ul>
-                <li>Costela no fogo de chão</li>
-            </ul>
+            
+            <section className="sessao">
+                <h2>📋 Cardápio</h2>
+                <ul className="lista-itens">
+                    <li>Costela no fogo de chão</li>
+                </ul>
+            </section>
 
-            <h2 style={{ marginTop: '15px' }}>🍻 Bebidas</h2>
-            <ul>
-                <li>Pepsi</li>
-                <li>Polar</li>
-            </ul>
+            <section className="sessao">
+                <h2>🍻 Bebidas</h2>
+                <ul className="lista-itens">
+                    <li>Pepsi</li>
+                    <li>Polar (Bem gelada!)</li>
+                </ul>
+            </section>
         </div>
     )
 }

@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
+.dashboard-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+.dashboard-header {
   text-align: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-group button {
+  padding: 8px 16px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+.input-group button:hover {
+  background-color: #535bf2;
 }
 
-.read-the-docs {
-  color: #888;
+/* Grade para organizar os exercícios */
+.exercicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* O "Card" que vai em volta de cada exercício */
+.card-exercicio {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-top: 4px solid #646cff;
+  overflow-x: auto; /* Evita que tabelas vazem do card */
+}
+
+.card-exercicio h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #213547;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
 }

@@ -1,34 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-.cont-app{
+html, body, #root {
+  min-height: 100vh;
+  background-color: #1a1a1a; 
+  color: #f4f4f4;
+}
+
+.cont-app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.cont-header{
-  background-color: #ff00e6; 
-  /* Define a altura como 100 píxels */
-  height: 100px;
-
+.cont-header {
+  background-color: #5c1616; 
+  height: 80px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
-.cont-main{
-  background-color: #c800ffa3; 
+.nav-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.botoes-nav {
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botoes-nav:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.botoes-nav.ativo {
+  background-color: #d97706; 
+  color: #1a1a1a;
+  border-color: #d97706;
+}
+
+.cont-main {
   flex: 1;
   display: flex;
+  justify-content: center;
+  padding: 40px 20px;
 }
-
-.botoes-nav{
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #ff000000
-}
-
-.botoes-nav:hover{
-  background-color: #ffffff46
-}
-
