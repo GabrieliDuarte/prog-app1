@@ -1,90 +1,20 @@
 import { useState } from 'react'
-import { FaHorse, FaCar, FaDragon, FaPlane, FaGraduationCap, FaMusic, FaBolt } from "react-icons/fa";
+import { FaHorse, FaCar, FaDragon, FaPlane, FaGraduationCap, FaMusic, FaBolt, FaReceipt, FaTasks } from "react-icons/fa";
 
 import './App.css'
 
 function App() {
   const [cavalos, setCavalos] = useState([
-    {
-      id: 11,
-      nome: "Trovão",
-      raca: "Mangalarga Marchador",
-      idade: 5,
-      pelagem: "Tordilho",
-      imagem: "https://images.pexels.com/photos/36948678/pexels-photo-36948678.jpeg"
-    },
-    {
-      id: 12,
-      nome: "Pérola",
-      raca: "Quarto de Milha",
-      idade: 4,
-      pelagem: "Alazã",
-      imagem: "https://images.pexels.com/photos/16375778/pexels-photo-16375778.jpeg"
-    },
-    {
-      id: 13,
-      nome: "Espírito",
-      raca: "Mustang",
-      idade: 7,
-      pelagem: "Baio",
-      imagem: "https://images.pexels.com/photos/27924587/pexels-photo-27924587.jpeg"
-    },
-    {
-      id: 14,
-      nome: "Apolo",
-      raca: "Puro Sangue Inglês",
-      idade: 6,
-      pelagem: "Castanho",
-      imagem: "https://images.pexels.com/photos/34351620/pexels-photo-34351620.jpeg"
-    },
-    {
-      id: 15,
-      nome: "Luna",
-      raca: "Appaloosa",
-      idade: 3,
-      pelagem: "Sardenta",
-      imagem: "https://images.pexels.com/photos/5424234/pexels-photo-5424234.jpeg"
-    },
-    {
-      id: 16,
-      nome: "Barão",
-      raca: "Crioulo",
-      idade: 10,
-      pelagem: "Zaino",
-      imagem: "https://images.pexels.com/photos/32020066/pexels-photo-32020066.jpeg"
-    },
-    {
-      id: 17,
-      nome: "Zéfiro",
-      raca: "Lusitano",
-      idade: 8,
-      pelagem: "Branco",
-      imagem: "https://images.pexels.com/photos/12979472/pexels-photo-12979472.jpeg"
-    },
-    {
-      id: 18,
-      nome: "Fagulha",
-      raca: "Árabe",
-      idade: 5,
-      pelagem: "Preto",
-      imagem: "https://images.pexels.com/photos/37196918/pexels-photo-37196918.jpeg"
-    },
-    {
-      id: 19,
-      nome: "Diamante",
-      raca: "Andaluz",
-      idade: 9,
-      pelagem: "Cinza",
-      imagem: "https://images.pexels.com/photos/12074232/pexels-photo-12074232.jpeg"
-    },
-    {
-      id: 20,
-      nome: "Cigana",
-      raca: "Campolina",
-      idade: 4,
-      pelagem: "Pampa",
-      imagem: "https://images.pexels.com/photos/34327310/pexels-photo-34327310.jpeg"
-    }
+    { id: 11, nome: "Trovão", raca: "Mangalarga Marchador", idade: 5, pelagem: "Tordilho", imagem: "https://images.pexels.com/photos/36948678/pexels-photo-36948678.jpeg" },
+    { id: 12, nome: "Pérola", raca: "Quarto de Milha", idade: 4, pelagem: "Alazã", imagem: "https://images.pexels.com/photos/16375778/pexels-photo-16375778.jpeg" },
+    { id: 13, nome: "Espírito", raca: "Mustang", idade: 7, pelagem: "Baio", imagem: "https://images.pexels.com/photos/27924587/pexels-photo-27924587.jpeg" },
+    { id: 14, nome: "Apolo", raca: "Puro Sangue Inglês", idade: 6, pelagem: "Castanho", imagem: "https://images.pexels.com/photos/34351620/pexels-photo-34351620.jpeg" },
+    { id: 15, nome: "Luna", raca: "Appaloosa", idade: 3, pelagem: "Sardenta", imagem: "https://images.pexels.com/photos/5424234/pexels-photo-5424234.jpeg" },
+    { id: 16, nome: "Barão", raca: "Crioulo", idade: 10, pelagem: "Zaino", imagem: "https://images.pexels.com/photos/32020066/pexels-photo-32020066.jpeg" },
+    { id: 17, nome: "Zéfiro", raca: "Lusitano", idade: 8, pelagem: "Branco", imagem: "https://images.pexels.com/photos/12979472/pexels-photo-12979472.jpeg" },
+    { id: 18, nome: "Fagulha", raca: "Árabe", idade: 5, pelagem: "Preto", imagem: "https://images.pexels.com/photos/37196918/pexels-photo-37196918.jpeg" },
+    { id: 19, nome: "Diamante", raca: "Andaluz", idade: 9, pelagem: "Cinza", imagem: "https://images.pexels.com/photos/12074232/pexels-photo-12074232.jpeg" },
+    { id: 20, nome: "Cigana", raca: "Campolina", idade: 4, pelagem: "Pampa", imagem: "https://images.pexels.com/photos/34327310/pexels-photo-34327310.jpeg" }
   ])
 
   const [carros, setCarros] = useState([
@@ -139,64 +69,17 @@ function App() {
   const [kpops, setKpops] = useState([
     { id: 500, nome: "BTS", integrantes: 7, empresa: "Big Hit (HYBE)", anoDebut: 2013, fandom: "ARMY" },
     { id: 501, nome: "Blackpink", integrantes: 4, empresa: "YG Entertainment", anoDebut: 2016, fandom: "BLINK" },
-    { id: 502, nome: "Twice", integrantes: 9, empresa: "JYP Entertainment", anoDebut: 2015, fandom: "ONCE" },{
-      id: 503,
-      nome: "Stray Kids",
-      integrantes: 8,
-      empresa: "JYP Entertainment",
-      anoDebut: 2018,
-      fandom: "STAY"
-    },
-    {
-      id: 504,
-      nome: "NewJeans",
-      integrantes: 5,
-      empresa: "ADOR (HYBE)",
-      anoDebut: 2022,
-      fandom: "Bunnies"
-    },
-    {
-      id: 505,
-      nome: "EXO",
-      integrantes: 9,
-      empresa: "SM Entertainment",
-      anoDebut: 2012,
-      fandom: "EXO-L"
-    },
-    {
-      id: 506,
-      nome: "Red Velvet",
-      integrantes: 5,
-      empresa: "SM Entertainment",
-      anoDebut: 2014,
-      fandom: "ReVeluv"
-    },
-    {
-      id: 507,
-      nome: "Seventeen",
-      integrantes: 13,
-      empresa: "Pledis (HYBE)",
-      anoDebut: 2015,
-      fandom: "Carat"
-    },
-    {
-      id: 508,
-      nome: "IVE",
-      integrantes: 6,
-      empresa: "Starship Entertainment",
-      anoDebut: 2021,
-      fandom: "DIVE"
-    },
-    {
-      id: 509,
-      nome: "ATEEZ",
-      integrantes: 8,
-      empresa: "KQ Entertainment",
-      anoDebut: 2018,
-      fandom: "ATINY"
-    }
+    { id: 502, nome: "Twice", integrantes: 9, empresa: "JYP Entertainment", anoDebut: 2015, fandom: "ONCE" },
+    { id: 503, nome: "Stray Kids", integrantes: 8, empresa: "JYP Entertainment", anoDebut: 2018, fandom: "STAY" },
+    { id: 504, nome: "NewJeans", integrantes: 5, empresa: "ADOR (HYBE)", anoDebut: 2022, fandom: "Bunnies" },
+    { id: 505, nome: "EXO", integrantes: 9, empresa: "SM Entertainment", anoDebut: 2012, fandom: "EXO-L" },
+    { id: 506, nome: "Red Velvet", integrantes: 5, empresa: "SM Entertainment", anoDebut: 2014, fandom: "ReVeluv" },
+    { id: 507, nome: "Seventeen", integrantes: 13, empresa: "Pledis (HYBE)", anoDebut: 2015, fandom: "Carat" },
+    { id: 508, nome: "IVE", integrantes: 6, empresa: "Starship Entertainment", anoDebut: 2021, fandom: "DIVE" },
+    { id: 509, nome: "ATEEZ", integrantes: 8, empresa: "KQ Entertainment", anoDebut: 2018, fandom: "ATINY" }
   ])
-    //listinha estilo NF
+
+  // listinha estilo NF
   const [compras, setCompras] = useState([
     { id: 600, nome: "Mouse Gamer RGB", preco: 15.50, quantidade: 2, valorTotal: 31.00 },
     { id: 601, nome: "Café Espresso (Cápsula)", preco: 8.90, quantidade: 5, valorTotal: 44.50 },
@@ -212,7 +95,8 @@ function App() {
     { id: 611, nome: "Mousepad Speed", preco: 27.30, quantidade: 3, valorTotal: 81.90 },
     { id: 612, nome: "Webcam Full HD", preco: 150.00, quantidade: 2, valorTotal: 300.00 }
   ]);
-   //  cada tarefa ser uma linha
+
+  // cada tarefa ser uma linha
   const [tarefas, setTarefas] = useState([
     { id: 700, titulo: "Configurar ambiente", responsavel: "Ana Silva", concluido: true },
     { id: 701, titulo: "Modelagem do banco", responsavel: "Bruno Costa", concluido: false },
@@ -229,9 +113,12 @@ function App() {
     { id: 712, titulo: "Atualizar dependências", responsavel: "Marcos Paulo", concluido: true }
   ])
 
+  //  somar o valor da Nota Fiscal
+  const totalNota = compras.reduce((acc, item) => acc + item.valorTotal, 0); //.reduce  percorre um array e reduz a um único valor final
+
   return (
     <div className="container">
-      <h1>Dashboard de Coleções</h1>
+      <h1>CARDS</h1>
 
       {/* SEÇÃO: CAVALOS */}
       <section>
@@ -243,7 +130,7 @@ function App() {
             // eu vou construir e retornar o bloco de HTML que está aqui dentro".
             // É como se fosse o CPF do card. Ajuda o React a saber exatamente qual card atualizar ou deletar no futuro sem se perder.
             <div key={cavalo.id} className="card">
-              {/*  imagem do cavalo */}
+              {/* imagem do cavalo */}
               <img src={cavalo.imagem} alt={cavalo.nome} className="img-card" />
 
               <h3>{cavalo.nome}</h3>
@@ -298,7 +185,6 @@ function App() {
               <h3>{poke.nome}</h3>
               <p><strong>Tipo:</strong> {poke.tipo}</p>
               <p><strong>Habilidade:</strong> {poke.habilidade}</p>
-
             </div>
           ))}
         </div>
@@ -348,6 +234,66 @@ function App() {
           ))}
         </div>
       </section>
+
+      {/*NOTA FISCAL */}
+      <section className="secao-nf">
+        <h2><FaReceipt /> Nota Fiscal de Compras</h2>
+        <div className="nota-fiscal">
+          <div className="nf-header">
+            <p><strong>LOJA YG</strong></p>
+            <p>Rua Ola mundo- SC</p>
+            <p>CNPJ: 00.000.000/0001-00</p>
+            <hr className="dashed" />
+          </div>
+          
+          <table className="tabela-nf">
+            <thead>
+              <tr>
+                <th>ITEM</th>   {/*<tr> (linhas de tabela). */}
+                <th>QTD</th>
+                <th>UNIT</th>
+                <th>TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              {compras.map((item) => (
+                <tr key={item.id}>
+                  <td>{item.nome}</td>
+                  <td>{item.quantidade}</td>
+                  <td>{item.preco.toFixed(2)}</td>
+                  <td className="valor-final">{item.valorTotal.toFixed(2)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <div className="nf-footer">
+            <hr className="dashed" />
+            <div className="total-container">
+              <span>TOTAL R$</span>  {/*grupar elementos em linha  */}
+              <span className="valor-total-nota">{totalNota.toFixed(2)}</span>
+            </div>
+            <p className="agradecimento">VOLTE SEMPRE!</p>
+          </div>
+        </div>
+      </section>
+
+      {/* LISTA DE TAREFAS */}
+      <section>
+        <h2><FaTasks /> Lista de Tarefas</h2>
+        <div className="lista-tarefas">
+          {tarefas.map((tarefa) => (
+            <div key={tarefa.id} className={`linha-tarefa ${tarefa.concluido ? 'tarefa-concluida' : ''}`}>
+              <input type="checkbox" checked={tarefa.concluido} readOnly />  {/*Se tarefa.concluido for true, ele já aparece marcado. */}
+              <div className="conteudo-tarefa">
+                <strong>{tarefa.titulo}</strong>
+                <span className="responsavel-tarefa">Resp: {tarefa.responsavel}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   )
 }
