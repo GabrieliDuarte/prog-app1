@@ -1,57 +1,82 @@
+  
 .container {
-  padding: 20px; /*Cria um espaço interno de 20 pixels em todos os lados*/
+  padding: 20px; /* Cria um espaço interno de 20 pixels em todos os lados */
   font-family: sans-serif;
-  background-color: #f4f4f9;
+  /* Usamos a variável --bg do index.css para o fundo se adaptar ao tema (claro/escuro) */
+  background-color: var(--bg); 
 }
 
 .grid {
-  display: grid; /*Ativa o sistema moderno de grade do CSS. Permite organizar elementos em linhas e colunas.*/
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*cria responsividade automática /Crie quantas colunas couberem na tela (auto-fill).*/
-  gap: 1.5rem; /*Define o buraco/espaço entre os cards*/
+  display: grid; /* Ativa o sistema moderno de grade do CSS. Permite organizar elementos em linhas e colunas. */
+  /* Cria responsividade automática: colunas de no mínimo 200px que se ajustam sozinhas */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 1.5rem; /* Define o buraco/espaço entre os cards */
   margin-bottom: 3rem;
 }
 
 .card {
-  background: white;
+  background: var(--code-bg); 
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow); 
   transition: transform 0.2s;
 }
 
-.card:hover { /*O que acontece quando o usuário passa o mouse por cima do elemento*/
+.card:hover { /* O que acontece quando o usuário passa o mouse por cima do elemento */
   transform: translateY(-5px);
 }
 
 .card h3 {
   margin-top: 0;
-  color: #333;
-  border-bottom: 2px solid #eee;
+  color: var(--text-h); 
+  border-bottom: 2px solid var(--border);
   padding-bottom: 10px;
 }
 
-.poke-card {
-  text-align: center; /*Centraliza todo o texto e imagens dentro dos cards*/
+section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h) !important; 
+}
+
+.img-card {
+  width: 100%;
+  height: 180px; /* Altura fixa para todos os cavalos ficarem iguais */
+  object-fit: cover; /* Faz a foto preencher o espaço sem ficar esticada */
+  border-radius: 8px; /* Arredonda as pontas da foto */
+  margin-bottom: 15px; /* Afasta a foto do título */
+  display: block;
+}
+
+x.poke-card {
+  text-align: center; /* Centraliza todo o texto e imagens dentro dos cards */
 }
 
 .poke-card img {
   width: 100px;
   height: 100px;
+  object-fit: contain; /* Não corta a imagem do pokémon */
+  margin: 0 auto;
 }
 
 .bad-grade { border-left: 5px solid #ff4d4d; }
 .good-grade { border-left: 5px solid #2ecc71; }
 
 .price {
-  font-weight: bold; /*Deixa a fonte em negrito.*/
-  color: #2c3e50;
+  font-weight: bold; /* Deixa a fonte em negrito. */
+  color: var(--accent); /* Usa a cor roxa de destaque*/
   font-size: 1.2rem;
 }
 
 .desculpa {
   font-size: 0.8rem;
-  color: #666;
-  background: #fff5f5;
-  padding: 5px;
+  color: var(--text);
+  background: var(--accent-bg);
+  padding: 8px;
   border-radius: 4px;
+  border-left: 3px solid var(--accent);
 }
